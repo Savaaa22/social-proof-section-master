@@ -1,0 +1,210 @@
+$very-dark-magneta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magneta: hsl(303, 10%, 53%);
+$light-grayish-magneta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+$spartan: 'Spartan', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $spartan;
+    font-size: 15px;
+}
+.wrapper {
+    max-width: 327.5px;
+    width: 100%;
+    margin: 0 auto;
+}
+h1 {
+    color: $very-dark-magneta;
+    font-size: 31px;
+    text-align: center;
+    line-height: 1;
+    font-weight: 700;
+}
+.text {
+    padding-top: 85px;
+    padding-bottom: 25px;
+    p {
+        text-align: center;
+        color: $dark-grayish-magneta;
+        font-weight: 500;
+        line-height: 1.8;
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+}
+.rating {
+    background-color: $light-grayish-magneta;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .rating-text {
+        color: $very-dark-magneta;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    .rating-stars {
+        margin-top: 20px;
+        img {
+            padding-right: 5px;
+        }
+    }
+}
+
+.review {
+    background-color: $very-dark-magneta;
+    color: $white;
+    border-radius: 10px;
+    padding: 40px 30px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+.bot {
+    padding-top: 35px;
+}
+.review-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .review-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        h3 {
+            font-size: 13px;
+        }
+        span {
+            font-size: 13px;
+            color: $soft-pink;
+            margin-top: 3px;
+            margin-left: 3px;
+        }
+    }
+    .review-image {
+        width: 40px;
+        height: 40px;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
+.review-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 920px;
+    }
+    
+    .top {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 150px;
+        .text {
+            width: 400px;
+            padding-top: 0;
+        }
+        .ratings {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .rating {
+                width: 400px;
+                flex-direction: row;
+                justify-content: flex-start;
+                padding-left: 20px;
+                height: 60px;
+                .rating-stars {
+                    margin-top: 0;
+                    margin-right: 20px;
+                }
+                .rating-text {
+                    margin-bottom: 0;
+                }
+            }
+            .rating2 {
+                align-self: center;
+            }
+            .rating3 {
+                align-self: flex-end;
+            }
+        }
+    }
+    .reviews {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 300px;
+        .review {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+        .review2 {
+            align-self: center;
+        }
+        .review3 {
+            margin-right: 0;
+            align-self: flex-end;
+        }
+    }
+    .bot {
+        padding-top: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        max-width: 1100px;
+    }
+    .top {
+        padding-top: 135px;
+        .text {
+            width: 440px;
+            margin-right: 140px;
+            h1 {
+                font-size: 46px;
+                text-align: left;
+            }
+            p {
+                text-align: left;
+            }
+        }
+        .ratings {
+            .rating {
+                width: 430px;
+            }
+        }
+    }
+    .bot {
+        padding-top: 50px;
+        .reviews {
+            .review {
+                margin-right: 30px;
+            }
+            .review3 {
+                margin-right: 0;
+            }
+        }
+    }
+}
